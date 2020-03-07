@@ -11,7 +11,7 @@ const CardSurface = styled(Paper)`
     width: 300px;
     min-height: 300px;
     margin-bottom: 25px;
-
+    margin: 1px;
 `;
 
 const ProductTitle = styled(Typography)`
@@ -36,8 +36,6 @@ const ProductCard =  props => {
     const [list, setList] = React.useState({
         pd: products
     })
-
-    
     
     useEffect(() => {
         const p = Array.from(filter).reduce((a, v, i) => `${a}[^${filter.substr(i)}]*?${v}`, '')
