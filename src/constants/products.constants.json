@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "name": "Cordless screwdriver",
+    "image": "https://i2.rozetka.ua/goods/3853338/zenit_843861_images_3853338096.jpg",
+    "price": 659
+  },
+  {
+    "id": 2,
+    "name": "Racetrack",
+    "image": "https://i8.rozetka.ua/goods/16879632/energyfit_815_images_16879632659.jpg",
+    "price": 13040
+  },
+  {
+    "id": 3,
+    "name": "Cordless drill Vitals AUmo 14/2nli",
+    "image": "https://i2.rozetka.ua/goods/9781919/vitals_52653_images_9781919455.jpg",
+    "price": 1522
+  },
+  {
+    "id": 4,
+    "name": "Cordless impact drill with screwdriver DeWalt",
+    "image": "https://i1.rozetka.ua/goods/17136542/dewalt_dcd796nt_images_17136542011.jpg",
+    "price": 5849
+  },
+  {
+    "id": 5,
+    "name": "Pracmanu Blue Cordless Screwdriver",
+    "image": "https://i2.rozetka.ua/goods/17274121/pracmanu_lp10168_images_17274121327.jpg",
+    "price": 531
+  },
+  {
+    "id": 6,
+    "name": "Itoss 915 ladder of 5 steps",
+    "image": "https://i1.rozetka.ua/goods/5029/itoss_15086_images_5029848.jpg",
+    "price": 857
+  },
+  {
+    "id": 7,
+    "name": "Schneider Electric Asfora socket with White grounding",
+    "image": "https://i1.rozetka.ua/goods/1314605/schneider_electric_asfora_eph2900121_images_1314605588.jpg",
+    "price": 64
+  },
+  {
+    "id": 8,
+    "name": "Soldering iron for plastic pipes Total",
+    "image": "https://i1.rozetka.ua/goods/14780358/total_tt328151_images_14780358602.jpg",
+    "price": 1365
+  },
+  {
+    "id": 9,
+    "name": "Construction hair dryer Einhell Classic",
+    "image": "https://i1.rozetka.ua/goods/138110/einhell_th_ha_2000_1_4520179_images_138110720.jpg",
+    "price": 654
+  },
+  {
+    "id": 10,
+    "name": "High-pressure washer Gartner PWB-2050 T",
+    "image": "https://i1.rozetka.ua/goods/11291745/gartner_847663_images_11291745180.jpg",
+    "price": 3765
+  },
+  {
+    "id": 11,
+    "name": "Ardis Santana 24 1 bicycle 2019 Gray with red",
+    "image": "https://i1.rozetka.ua/goods/14513162/ardis_0709_images_14513162409.jpg",
+    "price": 2958
+  },
+  {
+    "id": 12,
+    "name": "TRINX Majestic M116 Bike 2018 26 17 Matt-Black-Red-Gray",
+    "image": "https://i2.rozetka.ua/goods/11498618/trinx_m116mbrg_images_11498618312.jpg",
+    "price": 5849
+  },
+  {
+    "id": 13,
+    "name": "Titan Galaxy 29  Bike 2019 Black / Red / White",
+    "image": "https://i2.rozetka.ua/goods/10987651/titan_29tjal19_344_images_10987651377.jpg",
+    "price": 7500
+  },
+  {
+    "id": 14,
+    "name": "Makita angle grinder",
+    "image": "https://i1.rozetka.ua/goods/4179/makita_ga5030_images_4179548.jpg",
+    "price": 1499
+  },
+  {
+    "id": 15,
+    "name": "Xiaomi Mijia Electric Screwdriver Screwdriver",
+    "image": "https://i2.rozetka.ua/goods/14461674/xiaomi_mjddlsd001qw_images_14461674154.jpg",
+    "price": 112
+  },
+  {
+    "id": 16,
+    "name": "Angle grinder",
+    "image": "https://i1.rozetka.ua/goods/7965409/dnepr_m_80985000_images_7965409575.jpg",
+    "price": 1002
+  },
+  {
+    "id": 17,
+    "name": "Bosch hammer drill",
+    "image": "https://i2.rozetka.ua/goods/10012105/bosch_pbh_2100_re_06033A9320_images_10012105970.jpg",
+    "price": 2050
+  },
+  {
+    "id": 18,
+    "name": "Construction hair dryer Intertool",
+    "image": "https://i1.rozetka.ua/goods/1155632/intertool_dt_2416_images_1155632908.jpg ",
+    "price": 299
+  }
+
+]
