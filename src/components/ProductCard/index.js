@@ -31,7 +31,7 @@ const ProductImage = styled.img`
 `;
 
 const ProductCard =  props => {
-    let { products, filter } = props;
+    let { products, filter, status } = props;
 
     const [list, setList] = React.useState({
         pd: products
@@ -43,9 +43,25 @@ const ProductCard =  props => {
         setList({
             pd: products.filter(p => p.name.match(re))
         })
-        console.log(list.pd)
-        console.log(products)
     }, [filter, products])
+
+    useEffect(() => {
+        console.log(status)
+        let prods = [...products]
+        if (status) {
+            prods.sort((a, b) => {
+                return b.price - a.price
+            })
+            setList({
+                pd: prods
+            })
+        } else {
+            setList({
+                pd: prods
+            })
+        }
+        
+    }, [status, products])
 
 
     return(
