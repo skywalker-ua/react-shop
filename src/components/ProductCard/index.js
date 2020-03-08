@@ -61,7 +61,7 @@ const ProductCard =  props => {
             })
         }
         
-    }, [status, products])
+    }, [status])
 
 
     return(

@@ -6,7 +6,8 @@ import {
     Paper,
     InputBase,
     IconButton,
-    ButtonGroup
+    ButtonGroup,
+    Tooltip
 } from '@material-ui/core'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
@@ -41,12 +42,16 @@ const FilterInputs = (props) => {
         <div className="filter-inputs">
             <FilterSurface>
                 <div className="action-inputs">
-                    <IconButton><SearchIcon /></IconButton>
+                    <Tooltip title="Search by text">
+                        <IconButton><SearchIcon /></IconButton>
+                    </Tooltip>
                     <InputBase onChange={handleInput}  label="Search"></InputBase>
                     <ButtonGroup>
-                        <IconButton onClick={handleSort}>
-                            <SortIcon color={`${!sortActive && 'primary'}`} />
-                        </IconButton>
+                        <Tooltip title="Filter by price">
+                         <IconButton onClick={handleSort}>
+                             <SortIcon color={`${!sortActive && 'primary'}`} />
+                         </IconButton>
+                         </Tooltip>
                     </ButtonGroup>
                 </div>
             </FilterSurface>
