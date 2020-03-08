@@ -9,13 +9,14 @@ import { connect } from 'react-redux'
 const App = (props) => {
   return(
       <Layout>
-        <ProductCard filter={props.filterText} products={data} />
+        <ProductCard status={props.stat} filter={props.filterText} products={data} />
       </Layout>
   );
 }
 
 const mapStateToProps = state => ({
-  filterText: state.filterText
+  filterText: state.filterText,
+  stat: state.filterByPrice
 })
 
 export default connect(mapStateToProps, null)(App);

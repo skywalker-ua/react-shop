@@ -1,6 +1,7 @@
 // import { FILTER_BY_TEXT } from '../actions'
 let initialState = {
-    filterText: ''
+    filterText: '',
+    filterByPrice: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +11,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 filterText: action.text
             }
-            
+        case 'FILTER_BY_PRICE': 
+            return {
+                ...state,
+                filterByPrice: action.stat
+            }
         default: return state;
     }
     

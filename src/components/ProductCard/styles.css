@@ -1,0 +1,13 @@
+.product-price {
+    color: #fb3f4c;
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+.products-grid {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: flex-start;
+    
+}

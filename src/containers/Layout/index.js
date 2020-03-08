@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
-import './Layout.css'
-import FilterInputs from '../components/FilterInputs'
+import Header from '../../components/Header'
+import './styles.css'
+import FilterInputs from '../../components/FilterInputs'
 
 const Layout = ({ children }) => {
     return(
