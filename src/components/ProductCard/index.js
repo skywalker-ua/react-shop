@@ -3,6 +3,7 @@ import {
     Paper,
     Typography
  } from '@material-ui/core';
+import CartButton from '../CartButton'
 import styled from 'styled-components'
 import './styles.css'
 
@@ -10,7 +11,7 @@ const CardSurface = styled(Paper)`
     display: flex;
     flex-flow: column nowrap;
     width: 300px;
-    height: 300px;
+    height: 340px;
     margin-bottom: 25px;
     margin: 5px;
 `;
@@ -18,6 +19,8 @@ const CardSurface = styled(Paper)`
 const ProductTitle = styled(Typography)`
     cursor: pointer;
     padding: 5px;
+    min-height: 15%;
+    
     &:hover {
         color: #fb3f4c;
         text-decoration: underline;
@@ -25,10 +28,11 @@ const ProductTitle = styled(Typography)`
 `;
 
 const ProductImage = styled.img`
-    max-width: 200px; 
+    max-width: 80%; 
     cursor: pointer;
     align-self: center;
-    height: 200px;
+    max-height: 65%;
+    min-height: 65%;
 `;
 
 const ProductCard =  props => {
@@ -74,11 +78,17 @@ const ProductCard =  props => {
                     <ProductTitle variant="subtitle1" >
                         {product.name}
                     </ProductTitle>
-                    <div className="product-price">
-                        {product.price + ' ₴'}
+                    <div className="product-info">
+                     <div className="product-price">
+                         {product.price + ' ₴'}  
+                     </div>
+                     <div className="product-button">
+                        <CartButton />
+                     </div>
                     </div>
                 </CardSurface>
             ))}
+            
         </div>
     );
 }
