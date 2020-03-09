@@ -4,14 +4,27 @@ import {
     Toolbar,
     Typography
 }  from '@material-ui/core';
+import Cart from '../Cart'
+import styled from 'styled-components'
+
+const ToobarStyled = styled(Toolbar)`
+    display: flex;
+    flex-flow: row nowrap;
+`;
+
+const LogoText = styled(Typography)`
+    flex-grow: 1;
+    cursor: pointer;
+`;
 
 const Header =() => {
     return(
         <React.Fragment>
         <AppBar>
-            <Toolbar>
-                <Typography variant="h5">Shoppy</Typography>
-            </Toolbar>
+            <ToobarStyled>
+                <LogoText variant="h5">Shoppy</LogoText>
+                <Cart />
+            </ToobarStyled>
         </AppBar>
         <Toolbar />
         </React.Fragment>
