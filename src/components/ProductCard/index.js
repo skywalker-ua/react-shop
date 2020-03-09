@@ -5,13 +5,14 @@ import {
  } from '@material-ui/core';
 import styled from 'styled-components'
 import './styles.css'
+
 const CardSurface = styled(Paper)`
     display: flex;
     flex-flow: column nowrap;
     width: 300px;
-    min-height: 300px;
+    height: 300px;
     margin-bottom: 25px;
-    margin: 1px;
+    margin: 5px;
 `;
 
 const ProductTitle = styled(Typography)`
@@ -24,10 +25,10 @@ const ProductTitle = styled(Typography)`
 `;
 
 const ProductImage = styled.img`
-    height: 200px;
     max-width: 200px; 
     cursor: pointer;
     align-self: center;
+    height: 200px;
 `;
 
 const ProductCard =  props => {
@@ -37,6 +38,8 @@ const ProductCard =  props => {
         pd: products
     })
     
+    let initialProducts = products;
+
     useEffect(() => {
         const p = Array.from(filter).reduce((a, v, i) => `${a}[^${filter.substr(i)}]*?${v}`, '')
         const re = RegExp(p)
@@ -47,7 +50,7 @@ const ProductCard =  props => {
 
     useEffect(() => {
         console.log(status)
-        let prods = [...products]
+        let prods = [...list.pd]
         if (status) {
             prods.sort((a, b) => {
                 return b.price - a.price
@@ -57,10 +60,9 @@ const ProductCard =  props => {
             })
         } else {
             setList({
-                pd: prods
+                pd: initialProducts
             })
         }
-        
     }, [status])
 
 

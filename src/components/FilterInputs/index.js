@@ -19,6 +19,7 @@ const FilterSurface = styled(Paper)`
     flex-flow: row wrap;
     min-height: 60px;
     align-items: center;
+    width: 100%;
 `;
 
 const FilterInputs = (props) => {
@@ -49,7 +50,7 @@ const FilterInputs = (props) => {
                     <ButtonGroup>
                         <Tooltip title="Filter by price">
                          <IconButton onClick={handleSort}>
-                             <SortIcon color={`${!sortActive && 'primary'}`} />
+                            {!sortActive ? <SortIcon color='primary'/> : <SortIcon />}
                          </IconButton>
                          </Tooltip>
                     </ButtonGroup>
