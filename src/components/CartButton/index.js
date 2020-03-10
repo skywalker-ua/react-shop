@@ -16,10 +16,12 @@ const AddToCart = styled(Button)`
     }
 `;
 
-const CartButton = () => {
+const CartButton = (props) => {
+
     return(
         <AddToCart
-         startIcon={<ShoppingCartIcon />} >
+         startIcon={<ShoppingCartIcon />}
+         onClick={props.onClick} >
             Buy
         </AddToCart>
     );

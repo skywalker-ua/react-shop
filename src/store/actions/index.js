@@ -7,3 +7,8 @@ export const filterByPrice = (stat) => ({
     type: 'FILTER_BY_PRICE',
     stat
 })
+
+export const handleBuyEvent = (product) => ({
+    type: 'HANDLE_BUY',
+    product
+})

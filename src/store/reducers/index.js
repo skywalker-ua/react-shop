@@ -1,7 +1,8 @@
 // import { FILTER_BY_TEXT } from '../actions'
 let initialState = {
     filterText: '',
-    filterByPrice: false
+    filterByPrice: false,
+    currentProduct: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 filterByPrice: action.stat
+            }
+        case 'HANDLE_BUY':
+            return {
+                ...state,
+                currentProduct: state.currentProduct.concat(action.product)
             }
         default: return state;
     }
