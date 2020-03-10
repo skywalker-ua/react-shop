@@ -29,7 +29,6 @@ const FilterInputs = (props) => {
     const handleInput = e => {
         e.preventDefault()
         let filterValue = e.currentTarget.value
-        console.log(filterValue)
         props.filterByText(filterValue)
     }
 

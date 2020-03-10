@@ -6,7 +6,8 @@ import {
 import CartButton from '../CartButton'
 import styled from 'styled-components'
 import './styles.css'
-
+import { connect } from 'react-redux'
+import { handleBuyEvent } from '../../store/actions'
 const CardSurface = styled(Paper)`
     display: flex;
     flex-flow: column nowrap;
@@ -41,8 +42,13 @@ const ProductCard =  props => {
     const [list, setList] = React.useState({
         pd: products
     })
-    
+    const [addedCart, setAddedCart] = React.useState(false)
     let initialProducts = products;
+
+    const handleBuy = (product) => {
+        props.handleBuyEvent(product)
+        
+    }
 
     useEffect(() => {
         const p = Array.from(filter).reduce((a, v, i) => `${a}[^${filter.substr(i)}]*?${v}`, '')
@@ -53,7 +59,6 @@ const ProductCard =  props => {
     }, [filter, products])
 
     useEffect(() => {
-        console.log(status)
         let prods = [...list.pd]
         if (status) {
             prods.sort((a, b) => {
@@ -83,7 +88,7 @@ const ProductCard =  props => {
                          {product.price + ' ₴'}  
                      </div>
                      <div className="product-button">
-                        <CartButton />
+                       <CartButton  onClick={() => handleBuy(product)} /> 
                      </div>
                     </div>
                 </CardSurface>
@@ -93,4 +98,10 @@ const ProductCard =  props => {
     );
 }
 
-export default ProductCard;
+const mapDispatchToProps = dispatch => {
+    return {
+        handleBuyEvent: (product) => dispatch(handleBuyEvent(product))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ProductCard);
