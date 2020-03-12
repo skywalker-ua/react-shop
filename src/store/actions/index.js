@@ -12,3 +12,8 @@ export const handleBuyEvent = (product) => ({
     type: 'HANDLE_BUY',
     product
 })
+
+export const handleDeleteCart = id => ({
+    type: 'CART_DELETE',
+    id
+})
