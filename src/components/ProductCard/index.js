@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, lazy, Suspense } from 'react'
 import {
     Paper,
     Typography
  } from '@material-ui/core';
 import CartButton from '../CartButton'
+import PreLoader from '../Loader'
 import styled from 'styled-components'
 import './styles.css'
 import { connect } from 'react-redux'
@@ -36,18 +37,19 @@ const ProductImage = styled.img`
     min-height: 65%;
 `;
 
+const loader = () => <PreLoader />
+
 const ProductCard =  props => {
     let { products, filter, status } = props;
 
     const [list, setList] = React.useState({
         pd: products
     })
-    const [addedCart, setAddedCart] = React.useState(false)
+
     let initialProducts = products;
 
     const handleBuy = (product) => {
         props.handleBuyEvent(product)
-        
     }
 
     useEffect(() => {
@@ -74,26 +76,27 @@ const ProductCard =  props => {
         }
     }, [status])
 
-
     return(
         <div className="products-grid">
             { list.pd.map(product => (
+                
                 <CardSurface key={product.id}>
-                    <ProductImage src={product.image} />
-                    <ProductTitle variant="subtitle1" >
-                        {product.name}
-                    </ProductTitle>
-                    <div className="product-info">
-                     <div className="product-price">
-                         {product.price + ' ₴'}  
-                     </div>
-                     <div className="product-button">
-                       <CartButton  onClick={() => handleBuy(product)} /> 
-                     </div>
-                    </div>
+                    <Suspense fallback={loader()} >
+                        <ProductImage src={product.image} />
+                        <ProductTitle variant="subtitle1" >
+                            {product.name}
+                        </ProductTitle>
+                        <div className="product-info">
+                         <div className="product-price">
+                             {product.price + ' ₴'}  
+                         </div>
+                         <div className="product-button">
+                           <CartButton  onClick={() => handleBuy(product)} /> 
+                         </div>
+                        </div>
+                    </Suspense>
                 </CardSurface>
             ))}
-            
         </div>
     );
 }

@@ -1,0 +1,6 @@
+.product img {
+    max-width: 80%; 
+    cursor: pointer;
+    align-self: center;
+    max-height: 15%;
+}

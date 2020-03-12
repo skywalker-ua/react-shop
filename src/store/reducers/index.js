@@ -22,6 +22,12 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 currentProduct: state.currentProduct.concat(action.product)
             }
+        case 'CART_DELETE':
+            
+            return {
+                ...state,
+                currentProduct: state.currentProduct.filter(product => product.id !== action.id)
+            }
         default: return state;
     }
     
